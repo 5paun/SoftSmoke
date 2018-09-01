@@ -1,0 +1,318 @@
+/* Fonts settings */
+/*
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-technomart";
+  src: url("../fonts/symbols-technomart/fonts/symbols-technomart.woff") format("woff"),
+       url("../fonts/symbols-technomart/fonts/symbols-technomart.woff2") format("woff2");
+}
+*/
+.reg() {
+	font-family: "Circe", "Helvetica", "Arial", sans-serif; //миксины для названия веб-шрифтов
+}
+
+.bold() {
+	font-family: "Circe Bold", "Helvetica", "Arial", sans-serif;	
+}
+
+/* Colors */
+@btn-color: ;
+@icons-color: ;
+@text-color: ;
+@bg-color: #68579b;
+@white: #fff;
+
+/* Basic setting */
+html,
+body {		
+	min-width: 1092px;
+	margin: ;	
+	padding: ;
+	font-size: 10px;
+	line-height: ;
+	.reg();
+	color: ;
+	background-color: ;	
+	font-weight: ;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	-moz-force-broken-image-icon: 1;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;	
+}
+
+/* Анимация для автоматического скролла контента в браузере */
+.animated img {
+	-webkit-animation: movedImage 18s infinite linear;
+	-webkit-animation-play-state: running;
+	animation: movedImage 18s infinite linear; 
+	animation-play-state: running;
+}
+
+.paused img {
+	-webkit-animation-play-state: paused !important; 
+	animation-play-state: paused !important;
+}
+
+@-webkit-keyframes movedImage {
+0% {top:0;}
+95% {top:-200rem;}
+100% {top:0;}
+}
+
+@keyframes movedImage {
+0% {top:0;}
+95% {top:-200rem;}
+100% {top:0;}
+}
+
+/* Шапка сайта */  
+.header {
+	background: @bg-color;	
+	height: 8.5rem;	
+	&__text{
+		color: @white;
+		font-size: 2.4rem;		
+		line-height: 8.5rem;
+		float: left;
+		width: 119.2rem;
+	}
+}
+
+/* Чтобы не ругался валидатор! */
+h2 {
+	display: none;
+}
+
+/* Логотип сайта */
+.logo {
+	text-align: center;
+	margin-top: 11rem;
+	&__img {
+		width: 35.3rem;
+		height: 10.8rem;
+	}
+}
+
+/* Описание сайта */
+.intro {
+	font-size: 2rem;
+	margin-top: 8.5rem;
+	&-text__p:nth-child(2) {
+		margin-top: 2.5rem;
+	}
+}
+
+/* Браузер с автоматическим анимированным скроллом */
+.scroll-box {	
+	height: 79.8rem;
+	margin-top: 6rem;
+	background: #fff url("../img/img-main-1.jpg") center top no-repeat;	
+	box-shadow: 0 8px 20px 0 rgba(220,220,220,0.75);
+	padding-top: 4rem;
+	&-overflow {	
+		height: 75.8rem;
+		overflow: hidden;
+		&__img {		
+			position: relative;
+			top: 0; 
+			left: 0;	
+			width: 100%; 
+		}
+	}
+	// ДЕЛАЕТ НЕВИДИМОЙ ПОЛОСУ ПРОКРУТКИ В ХРОМЕ И ОПЕРЕ
+	&-overflow::-webkit-scrollbar {   
+		display: none;	
+	}
+}
+
+/* Браузер с ассортиментом товаров */
+.items {
+	position: relative;
+	margin-top: 18rem;
+	&-text {
+		margin-top: 25rem;
+		font-size: 1.4rem;
+		line-height: 1.8rem;	
+	}
+	&-img {
+		box-shadow: 0 0 25px 0 rgba(231,231,231,0.75);
+		&__catalog {
+			width: 90.8rem;
+			height: 116.1rem;
+		}
+	}
+	&-position {
+		box-shadow:  0 0 25px rgba(231, 231, 231, 0.75);
+		background-color: #ffffff;
+		position: absolute;
+		top: 30%;
+		left: 1.5rem;	
+		&__characteristic {
+			width: 31.6rem;
+			height: 47.6rem;	
+		}
+	}
+}
+
+/* Браузер с описанием кальяна "Красная роза" */
+.redrose-browser {
+	margin-top: 18rem;
+	box-shadow: 0 0 25px 0 rgba(231,231,231,0.75);
+	&__img {
+		width: 81.6rem;
+		height: 190rem;	
+	}	
+}
+
+.redrose-text {
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	&__p:first-child {
+		margin-top: 34rem;
+	}
+	&__p:nth-child(2) {
+		margin-top: 19.5rem;
+	}
+	&__p:nth-child(3) {
+		margin-top: 13rem;
+	}
+	&__p:last-child {
+		margin-top: 30rem;
+	}
+}
+
+/* Браузер с корзиной товаров */
+.basket {
+	margin-top: 33rem;
+	height: 120rem;
+	background: @bg-color;
+	color: @white;
+	position: relative;	
+	&-browser {
+		margin-top: -13rem;
+		&__img {
+			width: 90.8rem;
+			height: 142rem;
+			box-shadow: 0 0 25px 0 rgba(156,156,156,0.75);
+		}
+	}
+	&-text {
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		margin-right: -10rem;
+		&__p:first-child {
+			margin-top: 22rem;
+		}
+		&__p:last-child {
+			margin-top: 39rem;	
+		}
+	}
+}
+
+/* Мобильная версия сайта */
+.mobile {
+	position: relative;
+	padding-top: 20rem;
+	&-text__title {
+		font-size: 2.4rem;
+		font-weight: 700;
+		line-height: 1.2rem;
+		.bold()
+	}
+	&-text__p {
+		font-size: 2rem;
+		line-height: 2.8rem;
+	}
+	&-adaptive {
+		position: absolute;
+		width: 37.4rem;
+		height: 76.1rem;
+		top: -30rem;
+		left: 0;
+		background: url(../img/mob.png) center top no-repeat;
+		padding: 9.5rem 2.6rem;
+		&__overflow {
+			overflow-y: scroll;
+			overflow-x: hidden;
+			height: 57.3rem;
+			&__img {
+				width: 32.3rem;	
+			}
+		}
+		// ДЕЛАЕТ НЕВИДИМОЙ ПОЛОСУ ПРОКРУТКИ В ХРОМЕ И ОПЕРЕ
+		&__overflow::-webkit-scrollbar {   
+			display: none;
+		}
+	}
+	&-svg:after {
+		content: '';
+		width: 8.5rem;
+		height: 10.5rem;
+		position: absolute;
+		top: 43rem;
+		left: 66.5rem;
+		background: url(../img/arr.png) no-repeat;		
+	}
+	&-svg__img{
+		position: absolute;
+		left: 65rem;
+		top: 34rem;
+		width: 3.6rem;
+		height: 7rem;	
+	}
+}
+
+/* Настройки плагина для скролла */
+// ПРАВИТ КОСЯК В ПЛАГИНЕ С MARGIN`ом
+#mCSB_1_container { 
+	margin-right: 0;
+}
+
+// Ширина полосы прокрутки в плагине
+.mCSB_dragger_bar {  
+	width: 0.7rem !important;
+	margin-right: 0.2rem !important;
+	margin-top: -1rem !important;
+}
+
+/* SVG-благодарность */
+.thanks {
+	margin-top: 48rem;
+	margin-bottom: 30rem;
+	&__svg {
+		width: 36.9rem;
+		height: 35.9rem;
+	}
+}
+
+
+
+
+/* Медиа-запросы */
+@media (max-width: 1199px) {
+	
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 761px) {
+	
+}
+
+@media (max-width: 575px) {
+	
+}
+
+
