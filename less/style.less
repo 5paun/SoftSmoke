@@ -9,6 +9,44 @@
        url("../fonts/symbols-technomart/fonts/symbols-technomart.woff2") format("woff2");
 }
 */
+
+@font-face{
+	font-family: 'Circe';
+	src: url("../fonts/circe/hinted-subset-Circe-Light.eot");
+	src: url("../fonts/circe/hinted-subset-Circe-Light.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/circe/hinted-subset-Circe-Light.woff2") format("woff2"),
+		 url("../fonts/circe/hinted-subset-Circe-Light.woff") format("woff"),
+		 url("../fonts/circe/hinted-subset-Circe-Light.ttf") format("truetype");
+	font-weight:100;font-style:normal
+}
+@font-face{
+	font-family:'Circe';
+	src: url("../fonts/circe/hinted-subset-Circe-Bold.eot");
+	src: url("../fonts/circe/hinted-subset-Circe-Bold.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/circe/hinted-subset-Circe-Bold.woff2") format("woff2"),
+		 url("../fonts/circe/hinted-subset-Circe-Bold.woff") format("woff"),
+		 url("../fonts/circe/hinted-subset-Circe-Bold.ttf") format("truetype");
+	font-weight:bold;font-style:normal
+}
+@font-face{
+	font-family:'Circe';
+	src: url("../fonts/circe/hinted-subset-Circe-Regular.eot");
+	src: url("../fonts/circe/hinted-subset-Circe-Regular.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/circe/hinted-subset-Circe-Regular.woff2") format("woff2"),
+		 url("../fonts/circe/hinted-subset-Circe-Regular.woff") format("woff"),
+		 url("../fonts/circe/hinted-subset-Circe-Regular.ttf") format("truetype");
+	font-weight:300;font-style:normal
+}
+@font-face{
+	font-family:'droid';
+	src: url("../fonts/droid/subset-DroidSansMono.eot");
+	src: url("../fonts/droid/subset-DroidSansMono.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/droid/subset-DroidSansMono.woff2") format("woff2"),
+		 url("../fonts/droid/subset-DroidSansMono.woff") format("woff"),
+		 url("../fonts/droid/subset-DroidSansMono.ttf") format("truetype");
+	font-weight:normal;font-style:normal
+}
+
 .reg() {
 	font-family: "Circe", "Helvetica", "Arial", sans-serif; //миксины для названия веб-шрифтов
 }
@@ -31,13 +69,13 @@ body {
 	margin: ;	
 	padding: ;
 	font-size: 10px;
-	line-height: ;
+	line-height: 2.2rem;
 	.reg();
 	color: ;
 	background-color: ;	
 	font-weight: ;
 }
-
+/*
 img {
 	max-width: 100%;
 	height: auto;
@@ -48,7 +86,7 @@ img {
 	content: "";
 	display: table;
 	clear: both;	
-}
+}*/
 
 /* Анимация для автоматического скролла контента в браузере */
 .animated img {
@@ -106,27 +144,35 @@ h2 {
 /* Описание сайта */
 .intro {
 	font-size: 2rem;
-	margin-top: 8.5rem;
+	margin-top: 8.5rem;	
+	&-text__p {		
+		 
+	}
 	&-text__p:nth-child(2) {
 		margin-top: 2.5rem;
 	}
 }
 
 /* Браузер с автоматическим анимированным скроллом */
-.scroll-box {	
-	height: 79.8rem;
+.scroll{
 	margin-top: 6rem;
+}
+.scroll-box {	
+	width: 90.8rem;
+	height: 79.8rem;	
 	background: #fff url("../img/img-main-1.jpg") center top no-repeat;	
 	box-shadow: 0 8px 20px 0 rgba(220,220,220,0.75);
 	padding-top: 4rem;
 	&-overflow {	
+		width: 100%;
 		height: 75.8rem;
 		overflow: hidden;
-		&__img {		
+		&__img {	
+			max-width: 100%;
 			position: relative;
 			top: 0; 
-			left: 0;	
-			width: 100%; 
+			left: 0;			 
+			height: auto;
 		}
 	}
 	// ДЕЛАЕТ НЕВИДИМОЙ ПОЛОСУ ПРОКРУТКИ В ХРОМЕ И ОПЕРЕ
@@ -146,9 +192,9 @@ h2 {
 	}
 	&-img {
 		box-shadow: 0 0 25px 0 rgba(231,231,231,0.75);
+		width: 90.8rem;
 		&__catalog {
-			width: 90.8rem;
-			height: 116.1rem;
+			max-width: 100%;		
 		}
 	}
 	&-position {
@@ -156,10 +202,10 @@ h2 {
 		background-color: #ffffff;
 		position: absolute;
 		top: 30%;
-		left: 1.5rem;	
+		left: 1.5rem;
+		width: 31.6rem;	
 		&__characteristic {
-			width: 31.6rem;
-			height: 47.6rem;	
+			max-width: 100%;
 		}
 	}
 }
@@ -167,27 +213,29 @@ h2 {
 /* Браузер с описанием кальяна "Красная роза" */
 .redrose-browser {
 	margin-top: 18rem;
+	width: 81.6rem;
 	box-shadow: 0 0 25px 0 rgba(231,231,231,0.75);
 	&__img {
-		width: 81.6rem;
-		height: 190rem;	
+		max-width: 100%;		
 	}	
 }
 
 .redrose-text {
+	margin-left: 3rem;
+	margin-top: 52rem;
 	font-size: 1.4rem;
 	line-height: 1.8rem;
 	&__p:first-child {
 		margin-top: 34rem;
 	}
 	&__p:nth-child(2) {
-		margin-top: 19.5rem;
+		margin-top: 20.5rem;
 	}
 	&__p:nth-child(3) {
 		margin-top: 13rem;
 	}
 	&__p:last-child {
-		margin-top: 30rem;
+		margin-top: 29rem;
 	}
 }
 
@@ -199,10 +247,10 @@ h2 {
 	color: @white;
 	position: relative;	
 	&-browser {
+		width: 90.8rem;	
 		margin-top: -13rem;
 		&__img {
-			width: 90.8rem;
-			height: 142rem;
+			max-width: 100%;		
 			box-shadow: 0 0 25px 0 rgba(156,156,156,0.75);
 		}
 	}
@@ -211,7 +259,7 @@ h2 {
 		line-height: 1.8rem;
 		margin-right: -10rem;
 		&__p:first-child {
-			margin-top: 22rem;
+			margin-top: 10rem;
 		}
 		&__p:last-child {
 			margin-top: 39rem;	
@@ -223,6 +271,9 @@ h2 {
 .mobile {
 	position: relative;
 	padding-top: 20rem;
+	&-text {
+		position: relative;
+	}
 	&-text__title {
 		font-size: 2.4rem;
 		font-weight: 700;
@@ -233,10 +284,28 @@ h2 {
 		font-size: 2rem;
 		line-height: 2.8rem;
 	}
+	&-text__svg {
+		position: absolute;
+		top: 14.5rem;
+		right: 0;		
+		width: 3.6rem;
+		height: 7rem;	
+		margin-right: 7rem;
+	}
+	&-text__svg:after {
+		content: '';
+		width: 8.5rem;
+		height: 10.5rem;
+		position: absolute;
+		top: 8.5rem;
+		left: 1.7rem;
+		background: url(../img/arr.png) no-repeat;		
+	}	
 	&-adaptive {
 		position: absolute;
 		width: 37.4rem;
 		height: 76.1rem;
+
 		top: -30rem;
 		left: 0;
 		background: url(../img/mob.png) center top no-repeat;
@@ -244,9 +313,10 @@ h2 {
 		&__overflow {
 			overflow-y: scroll;
 			overflow-x: hidden;
+			width: 32.3rem;
 			height: 57.3rem;
 			&__img {
-				width: 32.3rem;	
+				max-width: 100%;			
 			}
 		}
 		// ДЕЛАЕТ НЕВИДИМОЙ ПОЛОСУ ПРОКРУТКИ В ХРОМЕ И ОПЕРЕ
@@ -254,22 +324,7 @@ h2 {
 			display: none;
 		}
 	}
-	&-svg:after {
-		content: '';
-		width: 8.5rem;
-		height: 10.5rem;
-		position: absolute;
-		top: 43rem;
-		left: 66.5rem;
-		background: url(../img/arr.png) no-repeat;		
-	}
-	&-svg__img{
-		position: absolute;
-		left: 65rem;
-		top: 34rem;
-		width: 3.6rem;
-		height: 7rem;	
-	}
+	
 }
 
 /* Настройки плагина для скролла */
